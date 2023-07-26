@@ -1,0 +1,45 @@
+<div class="page-wrapper">
+  <div class="page-content">
+    <div class="container-fluid d-flex align-items-center justify-content-center" style="height: 100vh;">
+      <div class="col-12">
+        <mat-card class="h-100 d-flex flex-column" *ngIf="user || isLoading">
+          <!-- Back arrow icon -->
+          <mat-card-header>
+            <mat-icon (click)="redirectToHomepage()">arrow_back</mat-icon>
+          </mat-card-header>
+
+          <!-- Display loading spinner when loading data -->
+          <div class="d-flex justify-content-center" *ngIf="isLoading">
+            <mat-spinner diameter="50"></mat-spinner>
+          </div>
+
+          <!-- Display user info when data is available -->
+          <div class="d-flex justify-content-center" *ngIf="user && !isLoading">
+            <img [src]="user.avatar" alt="User Avatar" style="max-width: 50%" />
+          </div>
+          <mat-card-content class="user-info-card" *ngIf="user && !isLoading">
+            <div fxLayout="row" fxLayoutAlign="space-between" class="user-info-row">
+              <p class="user-info-label">First Name:</p>
+              <p class="user-info-value">{{ user.first_name }}</p>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-between" class="user-info-row">
+              <p class="user-info-label">Last Name:</p>
+              <p class="user-info-value">{{ user.last_name }}</p>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-between" class="user-info-row">
+              <p class="user-info-label">ID:</p>
+              <p class="user-info-value">{{ user.id }}</p>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-between" class="user-info-row">
+              <p class="user-info-label">Email:</p>
+              <p class="user-info-value">{{ user.email }}</p>
+            </div>
+          </mat-card-content>
+          <mat-card-actions class="d-flex justify-content-center mt-3">
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </div>
+</div>

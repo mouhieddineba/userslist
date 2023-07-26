@@ -1,0 +1,47 @@
+mat-card-title {
+  color: #4f4f4f;
+  font-weight: 700;
+}
+
+p {
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #949494;
+  .price-tag {
+    font-weight: 700;
+    font-size: 18px;
+    color: #4f4f4f;
+    margin-left: 5px;
+  }
+}
+
+ul {
+  list-style-type: none;
+
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+
+    img {
+      margin-right: 5px;
+    }
+  }
+}
+
+mat-card-actions {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+button {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

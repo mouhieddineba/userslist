@@ -1,0 +1,25 @@
+<mat-card class="h-100 d-flex flex-column" *ngIf="user">
+  <div class="d-flex justify-content-center">
+    <img [src]="user.avatar" alt="Logo" style="max-width: 50%" />
+  </div>
+  <mat-card-header class="d-flex justify-content-center align-items-center">
+    <mat-card-title>Full Name : {{ user.first_name }} {{user.last_name}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div fxLayout="row" fxLayoutAlign="space-between">
+      <p>
+       id : {{user.id}}
+      </p>
+      <p> email : {{ user.email }}</p>
+    </div>
+    
+  </mat-card-content>
+  <mat-card-actions class="mt-auto">
+    <button
+      (click)="redirectToViewUserModule()"
+      mat-stroked-button
+    >
+      View User
+    </button>
+  </mat-card-actions>
+</mat-card>

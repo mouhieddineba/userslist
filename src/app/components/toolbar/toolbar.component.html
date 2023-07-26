@@ -1,0 +1,15 @@
+<mat-toolbar>
+
+  <h3 class="logo-text" (click)="goHome()">Company Logo</h3>
+  <span class="example-spacer"></span>
+  <button mat-button [matMenuTriggerFor]="menu">
+    {{ language }}
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="setLanguage('En')">En</button>
+    <button mat-menu-item (click)="setLanguage('Ar')">Ar</button>
+  </mat-menu>
+  <button mat-icon-button>
+    <mat-icon>search</mat-icon>
+  </button>
+</mat-toolbar>
